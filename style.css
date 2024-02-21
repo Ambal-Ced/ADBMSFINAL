@@ -4,8 +4,8 @@ html {
 }
 
 #logo {
-    float: left; /* Align logo to the very left */
-    margin-right: 10px; /* Add space between logo and posid */
+    float: left; 
+    margin-right: 10px;  
 
 }
 
@@ -15,22 +15,22 @@ html {
 }
 
 #logo li {
-    list-style-type: none; /* Remove bullet point from logo list item */
-    font-size: 10px; /* Set font size for the logo element */
+    list-style-type: none; 
+    font-size: 10px; 
 
 }
 
 #posid {
-    float: right; /* Align posid to the right */
+    float: right; 
 }
 
 #posid li {
     display: inline;
     margin-right: auto; 
-    font-size: 18px; /* Set font size for the posid elements */
+    font-size: 18px; 
 }
 
 #posid a {
-    text-decoration: none; /* Remove underline from posid links */
-    color: black; /* Set color to black for posid links */
+    text-decoration: none; 
+    color: black; 
 }
