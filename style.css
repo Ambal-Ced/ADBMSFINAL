@@ -22,6 +22,8 @@ html {
 
 #posid {
     float: right; 
+		margin-right: 40px;
+	display = flex;
 }
 
 #posid li {
