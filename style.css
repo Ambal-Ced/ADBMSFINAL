@@ -1,0 +1,34 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+#logo {
+    float: left; /* Align logo to the very left */
+    margin-right: 20px; /* Add space between logo and posid */
+}
+#logo li{
+	list-style-type: none;
+}
+
+#posid {
+    float: right; /* Align posid to the right */
+}
+
+#logo img{
+	height: 60%;
+	width: 35%;
+}
+#posid li {
+    display: inline;
+    margin-right: auto; 
+		margin-top: 40px;
+	list-style-type: none;
+}
+
+
+
+
+
