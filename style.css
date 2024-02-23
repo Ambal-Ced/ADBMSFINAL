@@ -1,36 +1,62 @@
-html {
-    height: 100%;
-    width: 100%;
-}
-
-#logo {
-    float: left; 
-    margin-right: 10px;  
+*{
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif;
 
 }
-
-#logo img {
-	width: 40%;
-	height: 60%;
+.banner{
+		width: 100%;
+		height: 100vh;
+		background-image: linear-gradient(rgba(77, 73, 73, 0.623),rgba(77, 73, 73, 0.623)), url(resources/Background.jpg);
+		background-size: cover;
+		background-position: center;
 }
 
-#logo li {
-    list-style-type: none; 
-    font-size: 10px; 
+.navbar{
+		width: 85%;
+		margin: auto;
+		padding: 30px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 
 }
 
-#posid {
-    float: right; 
+.logo{
+		width: 10%;
+		height: 10%;
+		border-radius: 100%;
+		cursor: pointer;
+		margin-left: -40px;
 }
 
-#posid li {
-    display: inline;
-    margin-right: auto; 
-    font-size: 18px; 
+.navbar ul li{
+		list-style: none;
+		display: inline-block;
+		margin: 0 20px;
+		position: relative;
+		font-size: larger;
+		font-weight: 900;
+
 }
 
-#posid a {
-    text-decoration: none; 
-    color: black; 
+.navbar ul li a{
+		text-decoration: none;
+		color: black;
+		text-transform: uppercase;
+
+}
+
+.navbar ul li::after{
+		content: '';
+		height: 5px;
+		width: 0;
+		background-color: rgb(255, 68, 0);
+		position: absolute;
+		left: 0;
+		bottom: -5px;
+		transition: 0.5s;
+}
+.navbar ul li:hover::after{
+		width: 100%;
 }
