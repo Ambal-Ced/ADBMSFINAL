@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Ponkan-Studio</title>
-		<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Studio-Ponkan</title>
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-		<div class="banner">
-				<div class="navbar">
-								<img src="resources/Logo.jpg" alt="" class="logo">
-						<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Download</a></li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">About Us</a></li>
-						</ul>
-				</div>
+	<header>
+		<nav class="navbar">
+			<a href="#" class="logo">Studio<span>.Ponkan</span></a>
+			<ul class="menulinks">
+				<span id="close-menu-btn" class="material-symbols-outlined">X</span>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">Downloads</a></li>
+				<li><a href="#">Service</a></li>
+				<li><a href="#">About Us</a></li>
+			</ul>
+			<span id="menu-btn" class="material-symbols-outlined">≡</span>
+		</nav>
+	</header>
 
-				<div class="Class-Container">
-
-				</div>
+	<section class="sectionclass">
+		<div class="content">
+			<h1>Studio Ponkan Serves picture with a smile</h1>
+			<p>
+				By serving the most promising picture we
+				made everyone smile everyday. Awaken the beauty of your self
+			</p>
+			<button>Reserve Now!</button>
+			<button>Download Your Picture</button>
 		</div>
+	</section>
+
+	<script>
+		const header = document.querySelector("header");
+		const menuBtn = document.querySelector("#menu-btn");
+		const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+		menuBtn.addEventListener("click", () => {
+			header.classList.toggle("show-mobile-menu");
+		});
+		closeMenuBtn.addEventListener("click", () => {
+			menuBtn.click();
+		});
 
 
+
+	</script>
 </body>
+
 </html>
