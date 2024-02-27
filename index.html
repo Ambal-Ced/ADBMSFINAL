@@ -14,8 +14,8 @@
 			<a href="#" class="logo">Studio<span>.Ponkan</span></a>
 			<ul class="menulinks">
 				<span id="close-menu-btn" class="material-symbols-outlined">X</span>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Products</a></li>
+				<li><a href="#Home-section">Home</a></li>
+				<li><a href="#products-section">Products</a></li>
 				<li><a href="#">Downloads</a></li>
 				<li><a href="#">Service</a></li>
 				<li><a href="#">About Us</a></li>
@@ -24,7 +24,7 @@
 		</nav>
 	</header>
 
-	<section class="sectionclass">
+	<section class="sectionclass" id="Home-section">
 		<div class="content">
 			<h1>Studio Ponkan Serves picture with a smile</h1>
 			<p>
@@ -35,6 +35,22 @@
 			<button>Download Your Picture</button>
 		</div>
 	</section>
+
+
+
+
+
+
+
+
+
+	<!---Product section-->
+	<section id="products-section" class="products-background">
+		<div class="content">
+
+		</div>
+	</section>
+
 
 	<script>
 		const header = document.querySelector("header");
@@ -47,10 +63,37 @@
 		closeMenuBtn.addEventListener("click", () => {
 			menuBtn.click();
 		});
+		/*for header scroll*/
+		document.querySelectorAll('.menulinks a').forEach(link => {
+			link.addEventListener('click', function (event) {
+				event.preventDefault();
+				const targetId = this.getAttribute('href');
+				const targetElement = document.querySelector(targetId);
+				if (targetElement) {
+					targetElement.scrollIntoView({behavior: 'smooth'});
+				}
+				header.classList.remove("show-mobile-menu");
+			});
+		});
 
-
+		document.querySelectorAll('.menulinks a').forEach(link => {
+			link.addEventListener('click', function (event) {
+				if (!this.getAttribute('href').startsWith('#')) {
+					return;
+				}
+				event.preventDefault();
+				const targetId = this.getAttribute('href');
+				const targetElement = document.querySelector(targetId);
+				if (targetElement) {
+					targetElement.scrollIntoView({behavior: 'smooth'});
+				}
+				header.classList.remove("show-mobile-menu");
+			});
+		});
+        /*for header scroll*/
 
 	</script>
+
 </body>
 
 </html>

@@ -1,0 +1,12 @@
+patch note:
+version 1.0.1----
+1. added a new javascript for smooth scrolling
+2. fix bug on when you click the nav bar choices when on phone view it doesnt close automatically
+3. added new design
+4. ui improvement
+5. minor bug fixes
+6. Added new function
+7. system improvement
+8. change name of the html file
+9. Delete unnecesarry file
+10. added new resources
