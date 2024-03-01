@@ -6,7 +6,5 @@ version 1.0.1----
 5. Added new function
 6. system improvement
 7. Delete unnecesarry file
-8. added new resources
-9. Scroll effect for new feel
-10. more compatibility
-11. Remove redundancy in jscript
+8. Move javascript to another file for more optimize code for future development
+9. more compatibility
