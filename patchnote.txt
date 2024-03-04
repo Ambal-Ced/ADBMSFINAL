@@ -1,10 +1,10 @@
 patch note:
 version 1.0.1----
 1. fix minor bug
-3. new ui design
-4. ui improvement
-5. Added new function
+3. ui improvement
+4. Added new function
+5. New resources
 6. system improvement
-7. Delete unnecesarry file
-8. Move javascript to another file for more optimize code for future development
-9. more compatibility
+7. more compatibility
+8. More updated information such as accessible information on "About us"
+9. Gonna Fix the Information on product once its properly done
