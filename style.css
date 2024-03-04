@@ -21,6 +21,12 @@ body {
 	z-index: 1;
 }
 
+html,
+body {
+	height: 100%;
+	margin: 0
+}
+
 header {
 	position: fixed;
 	top: 0;
@@ -191,6 +197,7 @@ header .navbar {
 	min-height: 100vh;
 	width: 100%;
 	max-height: 100vh;
+	margin-bottom: 90px;
 }
 
 .products-background .content2 {
@@ -402,9 +409,11 @@ header .navbar {
 
 
 .downloadsection {
-	padding-top: 150px;
+	margin-top: 180px;
 	max-height: 100vh;
 	min-height: 100vh;
+	margin-bottom: 120px;
+	padding-top: 100px;
 }
 
 .downloadsection .downloadcontent {
@@ -445,14 +454,58 @@ header .navbar {
 /*About us*/
 
 .about {
-	height: 100vh;
-	max-height: 100vh;
+	height: auto;
+	max-height: auto;
 	width: 100%;
+	margin-top: 80px;
+	padding-top: 50px;
+	padding-left: 150px;
+	padding-right: 150px;
+	padding-bottom: 50px;
+}
+
+.photologoa img {
+	width: 340px;
+	height: 250px;
+	border-radius: 50px;
+	padding: 10px 10px 10px 10px;
+}
+
+.photologob img {
+	border-radius: 100%;
+	padding: 10px 10px 10px 10px;
+}
+
+.acontent {
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: rgba(32, 32, 32, 0.685);
+	color: #fcfcfc;
+	padding: 20px 20px 20px 20px;
 }
 
 
+
+.footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #03030391;
+	color: white;
+	text-align: center;
+	padding: 5px 0;
+}
+
 /*media*/
 @media(max-width: 430px) {
+	.downloadsection {
+		margin-top: 100px;
+	}
+
 	.products-background {
 		height: 180vh;
 		min-height: auto;
@@ -494,6 +547,10 @@ header .navbar {
 }
 
 @media(max-width: 414px) {
+	.downloadsection {
+		margin-top: 100px;
+	}
+
 	.products-background {
 		height: 180vh;
 		min-height: auto;
@@ -535,6 +592,10 @@ header .navbar {
 
 
 @media(max-width: 375px) {
+	.downloadsection {
+		margin-top: 100px;
+	}
+
 	.products-background {
 		height: 240vh;
 		min-height: auto;
