@@ -5,7 +5,6 @@ if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $password = $_POST['passwords'] ?? null;
 
-    // Debugging: Echo the submitted email and password
     echo "Submitted email: " . htmlspecialchars($email) . "<br>";
     echo "Submitted password: " . htmlspecialchars($password) . "<br>";
 

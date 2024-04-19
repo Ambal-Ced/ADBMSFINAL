@@ -1,5 +1,6 @@
 <?php
 session_start(); // Start the session
+
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +35,7 @@ require_once 'resources/dtbs/connection.php';
                                 echo '<a href="#">Login</a>';
                             }
                             ?>
-                        </li><!--can be change to username-->
+                        </li>
                     </ul>
                 </nav>
             </div>

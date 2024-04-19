@@ -6,7 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 <?php
-session_start();
+session_start();//start the session only once
+	
 ?>
 </head>
 <body>
