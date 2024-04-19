@@ -1,12 +1,13 @@
 patch note:
-version 3.8.4----
-1. fix minor bug
+version 4.19.24----
+1. New Ui
 3. More Content
 4. Added new function
 5. New resources
 6. system improvement
-7. Added a function for automatic scrolling on a content from 
-a different html file
-8. More updated information such as accessible information on "About us"
-9. Product Info is now Fix
-10. Will probably convert the html file into php file later on the project.
+7. Converted into php
+8. Database connection
+9. Log In is now live
+10. Create account is now live
+11. New files
+12. More Style
