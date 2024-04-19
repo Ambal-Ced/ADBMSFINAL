@@ -1,66 +1,53 @@
-// Function to navigate back to home.html and scroll to a specific section
-function navigateBack(sectionId) {
-		window.location.href = 'Home.html#' + sectionId;
-}
+//function for website
 
-// Functions to handle navigation from account.html
-function back1() {
-		navigateBack('Home-section');
-}
-
-function back2() {
-		navigateBack('products-section');
-}
-
-function back3() {
-		navigateBack('downloadsect');
-}
-
-function back4() {
-		navigateBack('aboutus');
-}
-
-// Existing code for handling menu button clicks and smooth scrolling
-const header = document.querySelector("header");
-const menuBtn = document.querySelector("#menu-btn");
-const closeMenuBtn = document.querySelector("#close-menu-btn");
-
-menuBtn.addEventListener("click", () => {
-		header.classList.toggle("show-mobile-menu");
-});
-
-closeMenuBtn.addEventListener("click", () => {
-		menuBtn.click();
-});
-
-document.querySelectorAll('.menulinks a').forEach(link => {
-		link.addEventListener('click', function(event) {
-				event.preventDefault();
-				const targetId = this.getAttribute('href');
-				const targetElement = document.querySelector(targetId);
-				if (targetElement) {
-						targetElement.scrollIntoView({ behavior: 'smooth' });
-				}
-				header.classList.remove("show-mobile-menu");
-		});
-});
-
-// Functions for clicking buttons on home.html
-function Productsect() {
-		document.getElementById("products-section").scrollIntoView({ behavior: 'smooth' });
-}
-
-function DownloadPage() {
-		document.getElementById("downloadsect").scrollIntoView({ behavior: 'smooth' });
-}
-
-// Automatically scroll to the section specified in the URL hash when the page loads
 document.addEventListener('DOMContentLoaded', function() {
-		if (window.location.hash) {
-				const sectionId = window.location.hash.substring(1);
-				const targetElement = document.getElementById(sectionId);
-				if (targetElement) {
-						targetElement.scrollIntoView({ behavior: 'smooth' });
+	// Select all links in the navigation bar
+	const navLinks = document.querySelectorAll('.menu-links li a');
+
+	// Add a click event listener to each link
+	navLinks.forEach(link => {
+		link.addEventListener('click', function(event) {
+			// Check if the href starts with a #
+			if (this.getAttribute('href').startsWith('#')) {
+				// Prevent the default action
+				event.preventDefault();
+
+				// Get the target section ID from the clicked link's href attribute
+				const targetId = this.getAttribute('href');
+
+				// Find the target section
+				const targetSection = document.querySelector(targetId);
+
+				// If the target section exists, scroll to it smoothly
+				if (targetSection) {
+					targetSection.scrollIntoView({ behavior: 'smooth' });
 				}
-		}
+			}
+			// If the href does not start with a #, allow the default action
+		});
+	});
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+	// Check if the current URL contains a specific query parameter indicating a redirect from booking.html
+	const urlParams = new URLSearchParams(window.location.search);
+	const redirectFromBooking = urlParams.get('redirectFromBooking');
+
+	if (redirectFromBooking === 'true') {
+		// Redirect to index.html and scroll to the Download section
+		window.location.href = 'index.html#download-section';
+	}
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+	var loginLink = document.querySelector('.login-link');
+	var miniNavbar = document.querySelector('.mini-navbar');
+
+	loginLink.addEventListener('mouseover', function() {
+		miniNavbar.style.display = 'block';
+	});
+
+	loginLink.addEventListener('mouseout', function() {
+		miniNavbar.style.display = 'none';
+	});
 });
