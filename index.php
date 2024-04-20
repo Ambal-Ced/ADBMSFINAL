@@ -6,8 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 <?php
-session_start();//start the session only once
-	
+session_start();
 ?>
 </head>
 <body>
@@ -18,21 +17,26 @@ session_start();//start the session only once
             <ul class="menu-links">
                 <li><a href="#Home-section">Home</a></li>
                 <li><a href="booking.php">Book</a></li>
-                <li><a href="#download-section">Download</a></li>
+                <li><a href="#down-section">Download</a></li>
                 <li><a href="#about-section">FAQs</a></li>
                 <li class="login-link">
-    <?php
-    if (isset($_SESSION['username'])) {
-        echo '<a href="#">' . $_SESSION['username'] . '</a>';
-    } else {
-        echo '<a href="login.php">LogIn</a>';
-    }
-    ?>
-    <div class="mini-navbar">
-        <a href="login.php">Login</a>
-        <a href="register.php">Register</a>
-    </div>
-</li>
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        echo '<a href="profile.php">' . $_SESSION['username'] . '</a>';
+                        echo '<div class="dropdown-content">';
+                        echo '<a href="profile.php">' . $_SESSION['username'] . '</a>';
+                        echo '<a href="settings.php">Settings</a>';
+                        echo '<a href="logout.php">Logout</a>';
+                        echo '</div>';
+                    } else {
+                        echo '<a href="login.php">LogIn</a>';
+                        echo '<div class="dropdown-content">';
+                        echo '<a href="login.php">LogIn</a>';
+                        echo '<a href="register.php">Register</a>';
+                        echo '</div>';
+                    }
+                    ?>
+                </li>
             </ul>
         </nav>
     </div>
@@ -58,16 +62,16 @@ session_start();//start the session only once
 
 
 <!--Download-->
-    <section class="downloadsection" id="download-section">
-        <div class="downloadcontent">
+    <section class="downsection" id="down-section">
+        <div class="downcontent">
             <h1>Thank You For Choosing Our Service</h1>
                 <h3>The Ponkan Staff Will Give You A Code</h3>
                     <p>We The Ponkan Studio, Do our Best to ensure youre picture quality
                     <br>will be the best and easy to download. We express our gratitude <br>
                     on choosing our studio for taking your memorable picture <br> <br>
                     </p>
-                        <div class="texttype">
-                            <input type="text" placeholder="Enter Code Here" id="CodePic">
+                        <div class="texttinput">
+                            <input type="text" placeholder="Enter Code Here" id="CodePic" class="inputtsize">
                         </div>
         <div class="dlbutton"><button id="dlpic">Download Now!</button></div>
             <br>

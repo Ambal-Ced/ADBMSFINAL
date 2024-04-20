@@ -1,14 +1,6 @@
 patch note:
-version 4.19.24----
-1. New Ui
-3. More Content
-4. Added new function
-5. New resources
-6. system improvement
-7. Converted into php
-8. Database connection
-9. Log In is now live
-10. Create account is now live
-11. New files
-12. More Style
-13. Better style
+version 4.28.22----
+1. More Content
+2. Added new function
+3. System improvement
+4. Minor Bug fixes

@@ -1,105 +1,105 @@
-* {
-	margin: 0;
-	padding: 0;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: white;
+*{
+    margin:0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
 }
 
-body {
-	background-image: url('resources/logobg/bg/Background.jpg');
-	background-size: cover;
-	height: 100vh;
-	width: auto;
-	background-attachment: fixed;
-	z-index: 1;
+body{
+    background-image: url('resources/logobg/bg/Background.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+    background-attachment: fixed;
+    z-index: 1;
 }
 
-.bodies {
-	background-image: url('resources/logobg/bg/bg4.jpg');
-	background-position: center;
-	background-size: cover;
-	height: 100vh;
-	width: auto;
-	background-attachment: fixed;
-	z-index: 1;
+.bodies{
+    background-image: url('resources/logobg/bg/bg4.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+    background-attachment: fixed;
+    z-index: 1;
 }
 
-.header-content {
-	background-color: rgb(20, 19, 19);
-	position: fixed;
-	border-bottom: 3px solid black;
-	border-radius: 8px;
-	justify-content: space-between;
-	width: 100%;
+.header-content{
+    background-color: rgb(20, 19, 19);
+    position: fixed;
+    border-bottom: 3px solid black;
+    border-radius: 8px;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.header-content a {
-	color: rgb(255, 145, 0);
-	text-decoration: none;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: color 0.4s ease-in-out;
+.header-content a{
+    color:rgb(255, 145, 0);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.4s ease-in-out;
 }
 
-.header-content a:hover {
-	color: rgb(0, 212, 0);
+.header-content a:hover{
+    color:rgb(0, 212, 0);
 }
 
-header .logo-name {
-	color: rgb(255, 145, 0);
-	text-decoration: none;
-	font-size: 1.8rem;
-	padding-bottom: 12px;
-	transition: color 0.3s ease-in;
+header .logo-name{
+    color: rgb(255, 145, 0);
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding-bottom: 12px;
+    transition: color 0.3s ease-in;
 }
 
-header .logo-name:hover {
-	color: rgb(0, 212, 0);
+header .logo-name:hover{
+    color: rgb(0, 212, 0);
 }
 
-header .navbar .menu-links {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	font-size: 1.8rem;
-	padding-bottom: 10px;
+header .navbar .menu-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+    padding-bottom: 10px;
 }
-
-.menu-links {
-	list-style-type: none;
+.menu-links{
+    list-style-type: none;
 }
 
 .menu-links li {
-	margin-right: 15px;
-	margin-left: 15px;
-	font-size: 1.5 rem;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 1.5 rem;
 }
 
 .menu-links li a {
-	text-decoration: none !important;
+    text-decoration: none !important; /* Ensure no text decoration */
 }
 
-button {
-	background-color: rgb(0, 212, 0);
-	padding: 10px 10px 10px 10px;
-	border-radius: 15px;
-	border-color: white;
-	margin-top: 15px;
-	transition: color 0.3s ease-in-out;
+button{
+    background-color: rgb(0, 212, 0);
+    padding: 15px 15px 15px 15px;
+    border-radius: 15px;
+    border-color: white;
+    margin-top: 15px;
+    transition: color 0.3s ease-in-out;
+    font-size: 1rem;
 }
 
-button:hover {
-	background-color: rgb(255, 145, 0);
-	color: black;
+button:hover{
+    background-color: rgb(255, 145, 0);
+    color: black;
 }
 
 .Homesection {
-	min-height: 50vh;
-	justify-content: flex-start;
-	max-width: 40%;
-	padding-left: 10%;
-	padding-top: 22%;
+    min-height: 50vh;
+    justify-content: flex-start;
+    max-width: 40%;
+    padding-left: 10%;
+    padding-top: 22%;
 }
 
 
@@ -109,52 +109,195 @@ button:hover {
 	background-color: rgba(35, 40, 44, 0.692);
 	padding-top: 20px;
 	padding-bottom: 20px;
-	padding-left: 10px;
+	padding-left: 20px;
 	margin-right: auto;
 	border-radius: 20px;
 	overflow: auto;
 	color: aliceblue;
+    font-size: 1.4rem;
 }
 
+.downsection{
+    min-height: 50vh;
+    justify-content: flex-start;
+    max-width: 40%;
+    padding-left: 10%;
+    padding-top: 12%; /* Adjusted to move the section up */
+}
 
-
-
-section {
-	height: 100vh;
+.downsection .downcontent{
+	margin: 0 auto;
 	width: 100%;
-	padding-top: 90px;
+	background-color: rgba(35, 40, 44, 0.692);
+	padding-top: 20px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+    padding-right: 30px;
+	margin-right: auto;
+	border-radius: 20px;
+	overflow: auto;
+	color: aliceblue;
+    font-size: 1.2rem;
 }
 
-.container {
-	display: flex;
-	align-self: center;
-	justify-content: center;
-	min-height: 90vh;
+.inputtsize{
+    width: 300px;
+    height: 50px;
+    color: black;
+    font-size: 1.2rem;
+}
+
+
+section{
+    height: 100vh;
+    width: 100%;
+    padding-top: 90px;
+}
+
+.container{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    min-height: 90vh;
 
 }
 
 .mini-navbar {
-	display: none;
-	position: absolute;
-	background-color: rgb(15, 16, 17);
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: rgb(15, 16, 17);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-top: 12px;
 }
 
 .mini-navbar a {
-	margin-top: 20px;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	color: rgb(255, 145, 0);
+    margin-top: 20px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: rgb(255, 145, 0);
 }
 
 .mini-navbar a:hover {
-	background-color: rgb(15, 16, 17);
-	color: rgb(0, 212, 0);
+    background-color: rgb(15, 16, 17);
+    color: rgb(0, 212, 0);
 }
 
 .login-link:hover .mini-navbar {
-	display: block;
+    display: block;
+}
+
+.login-link {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    padding-top: 10px;
+    background-color: rgb(15, 16, 17);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    left: -40px;
+}
+.dropdown-content a{
+    margin-top: 12px;
+}
+.login-link:hover .dropdown-content {
+    display: block;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding-top: 5%;
+}
+
+.box{
+    background-color: rgba(114, 114, 114, 0.555);
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 128px 0 rgb(0,0,0,0.1), 0 32px 64px -48px;
+}
+.form-box{
+    width: 450px;
+    margin: 0px;
+}
+.form-box header{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+}
+
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.login-header ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.form-box form .field{
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.form-box form .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    outline: none;
+    color: black;
+}
+.btn{
+    height: 35px;
+    background-color:rgb(0, 212, 0);
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+.btn:hover{
+    background-color: rgb(255, 145, 0);
+    color: black;
+}
+.submit{
+    width: 100%;
+}
+
+.link{
+    margin-bottom: 15px;
+    color: rgb(255, 145, 0);
+}
+.link a{
+    color: rgb(255, 145, 0);
 }
