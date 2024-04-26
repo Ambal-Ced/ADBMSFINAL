@@ -47,6 +47,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: -10%;
 }
 
 .login-header ul {
@@ -103,3 +104,4 @@
 .link a{
     color: rgb(255, 145, 0);
 }
+

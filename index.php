@@ -25,7 +25,8 @@ session_start();
                         echo '<a href="profile.php">' . $_SESSION['username'] . '</a>';
                         echo '<div class="dropdown-content">';
                         echo '<a href="profile.php">' . $_SESSION['username'] . '</a>';
-                        echo '<a href="settings.php">Settings</a>';
+                        echo '<a href="Account_management.php">Settings</a>';
+                        echo '<a href="order.php">Schedule</a>';
                         echo '<a href="logout.php">Logout</a>';
                         echo '</div>';
                     } else {
@@ -52,7 +53,7 @@ session_start();
 				By serving the most promising picture we
 				made everyone smile everyday. Awaken the beauty of your self
 			</p>
-			<button onclick="location.href = 'booking.html'">Book Now!</button>
+			<button onclick="location.href = 'booking.php'">Book Now!</button>
 			<button onclick="DownloadPage()">Download Your Picture</button>
 		</div>
     </section>
@@ -87,7 +88,7 @@ session_start();
         <section class="aboutsection" id="about-section">
             <div class="acontent">
 
-                <div class="logo-ponkan"><img src="#" alt=""></div>
+                <div class="logo-ponkan"><img src="resources/logobg/logo/stdui.png" alt=""></div>
                 
                 <h1>STUDIO PONKAN</h1>
                 Studio Ponkan specializes in capturing the perfect moment in the ideal
@@ -102,7 +103,7 @@ session_start();
                 Join us as we explore the wonders of life through the lenses of invention and
                 creativity.
                 </p>
-                <div class="logo-idev"><img src="#" alt=""></div>
+                <div class="logo-idev"><img src="resources/logobg/logo/Logo_Idev.png" alt=""></div>
                 
                 <h1>INTERFACE DEVELOPER</h1>
                 <p>A Group of 2nd Year BSIT Student Year 2023-2024, Who Aims to Help Many Company Who Needs a Lightweight System

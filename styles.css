@@ -1,0 +1,92 @@
+.user-info {
+    padding-top: 2%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.styling{
+    background-color: #6d6969b9;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border: 2px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-info p, .user-info .edit-profile-link {
+    padding-left: 10%;
+}
+
+.user-info p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.user-info h2 {
+    padding-left: 10%;
+    padding-bottom: 1%;
+}
+
+.user-info h3 {
+    padding-left: 10%;
+    padding-bottom: 1%;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.container{
+    padding-top: 5%;
+}
+label{
+    color: white;
+}
+
+.cont {
+    position: relative;
+    background-color: rgba(63, 63, 63, 0.493);
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.cont .ainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.cont .field input{
+    margin-top: 10% ;
+    font-size: 1.1rem;
+}
+.cont .ainer a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.7rem;
+    margin-right: 7px;
+    margin-top: 7px;
+    padding-bottom: 15%;
+}
+.aboutsection{
+    padding: 5%;
+}
+
+.editnum a{
+    text-decoration: none;
+}
+

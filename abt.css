@@ -1,0 +1,67 @@
+.email-edit-form, .password-edit-form, .delete-account-form {
+    display: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+}
+
+.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.cont{
+    background-color: rgba(117, 117, 117, 0.479);
+    padding: 2% 2% 2% 2%;
+    border: solid 2px white;
+    border-radius: 20px;
+    max-width: 55%;
+
+    margin-top: 25%;
+}
+
+button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+input{
+    color: black;
+}
+
+
+.errorr {
+    background-color: rgba(117, 117, 117, 0.479);
+    width: 40%;
+    margin: 20% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.tree {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tree a {
+    text-decoration: none;
+    margin-top: -1%;
+    font-size: 1.5rem;
+}
+
+.de{
+    height: 20%;
+    min-height: 10%;
+}
