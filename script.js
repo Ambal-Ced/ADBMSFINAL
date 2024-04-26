@@ -41,3 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'index.html#download-section';
     }
 });
+
+
+function DownloadPage() {
+    document.getElementById("down-section").scrollIntoView({ behavior: 'smooth' });
+}
+
+
+
+

@@ -6,9 +6,9 @@
 }
 
 body{
-    background-image: url('resources/logobg/bg/Background.jpg');
+    background-image: url('resources/logobg/bg/bg3.jpg');
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     width: auto;
     background-attachment: fixed;
     z-index: 1;
@@ -18,44 +18,65 @@ body{
     background-image: url('resources/logobg/bg/bg4.jpg');
     background-position: center;
     background-size: cover;
-    height: 100vh;
-    width: auto;
+    height: 100%;
+    width: 100;
     background-attachment: fixed;
     z-index: 1;
+    overflow: hidden;
 }
 
 .header-content{
-    background-color: rgb(20, 19, 19);
+    background-color: rgba(99, 99, 99, 0.699);
     position: fixed;
-    border-bottom: 3px solid black;
     border-radius: 8px;
     justify-content: space-between;
     width: 100%;
 }
 
-.header-content a{
-    color:rgb(255, 145, 0);
+.header-content a {
+    color: rgb(255, 255, 255);
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: color 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
 .header-content a:hover{
-    color:rgb(0, 212, 0);
+    color:rgb(253, 122, 0);
 }
 
+.header-content a:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-color: rgb(0, 212, 0);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.header-content a:hover:after {
+    width: 100%;
+}
+
+
 header .logo-name{
-    color: rgb(255, 145, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 1.8rem;
     padding-bottom: 12px;
     transition: color 0.3s ease-in;
 }
 
+header .logo-name:hover::after{
+    width: 0%;
+}
 header .logo-name:hover{
-    color: rgb(0, 212, 0);
+    color:rgb(253, 122, 0);
 }
 
 header .navbar .menu-links{
@@ -76,7 +97,7 @@ header .navbar .menu-links{
 }
 
 .menu-links li a {
-    text-decoration: none !important; /* Ensure no text decoration */
+    text-decoration: none !important;
 }
 
 button{
@@ -115,14 +136,17 @@ button:hover{
 	overflow: auto;
 	color: aliceblue;
     font-size: 1.4rem;
+    border: 2px solid white;
 }
 
 .downsection{
+    height: 100vh;
     min-height: 50vh;
     justify-content: flex-start;
     max-width: 40%;
     padding-left: 10%;
-    padding-top: 12%; /* Adjusted to move the section up */
+    padding-top: 12%;
+    padding-bottom: 10%;
 }
 
 .downsection .downcontent{
@@ -138,6 +162,7 @@ button:hover{
 	overflow: auto;
 	color: aliceblue;
     font-size: 1.2rem;
+    border: 2px solid white;
 }
 
 .inputtsize{
@@ -220,19 +245,29 @@ section{
     padding-top: 5%;
 }
 
+.positioning{
+    height: 40px;
+    min-height: 10%;
+}
+
+
 .box{
+    padding-top: 20px;
     background-color: rgba(114, 114, 114, 0.555);
     display: flex;
     flex-direction: column;
     padding: 25px 25px;
     border-radius: 20px;
     box-shadow: 0 0 128px 0 rgb(0,0,0,0.1), 0 32px 64px -48px;
+    border: 2px solid white;
 }
 .form-box{
     width: 450px;
     margin: 0px;
+    padding-top: 20px;
 }
 .form-box header{
+
     font-size: 25px;
     font-weight: 600;
     padding-bottom: 10px;
@@ -301,3 +336,277 @@ section{
 .link a{
     color: rgb(255, 145, 0);
 }
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.aboutsection{
+    height: 100vh;
+    min-height:100vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 25%;
+}
+
+.aboutsection .acontent{
+    background-color: rgba(35, 40, 44, 0.692);
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 2%;
+    margin: 3%;
+    width: 70%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pht{
+    height: 50%;
+    width: 20%;
+}
+
+
+
+.option-container {
+    position: relative;
+    display: inline-block;
+    background-color: rgba(35, 40, 44, 0.692);
+    padding: 2%;
+    border-radius: 20px;
+    border: solid 2px white;
+    font-size: 1.4rem;
+}
+
+
+.option-container .options-hidden a{
+    color: black;
+}
+
+#selectedOption {
+    cursor: pointer;
+}
+
+.options-hidden {
+    display: none;
+    position: absolute;
+    background-color: #8d8d8d;
+    color: #000000;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 1.4rem;
+}
+
+.option {
+    font-size: 1.4rem;
+    color: black;
+    text-decoration: none;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.815);
+}
+
+.option:hover {
+    background-color: rgb(0, 212, 0);
+}
+
+.boxread{
+    font-size: 1.4rem;
+    color: black;
+}
+
+
+.as-whole {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+
+.option-container label{
+    color: black;
+    font-size: 1.4rem;
+}
+
+
+.Addressing label{
+    color: black;
+    font-size: 1.3rem;
+}
+.Addressing input{
+    width: 65%;
+    color: black;
+    font-size: 1.3rem
+}
+
+
+.package-A-portrait{
+    margin-top: 4%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+}
+.package-B-portrait{
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+}
+.package-C-portrait{
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+}
+.package-A-food{
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+}
+.package-B-food{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+}
+.package-C-food{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+}
+.package--currated{
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+}
+
+.package-A-portrait p{
+    padding-left: 4%;
+    font-size: 1.3rem;
+    color: black;
+}
+.package-B-portrait p{
+    color: black;
+    font-size: 1.3rem;
+    padding-left: 4%;
+}
+.package-C-portrait p{
+    color: black;
+    font-size: 1.3rem;
+    padding-left: 4%;
+}
+.package-A-food p{
+    color: black;
+    font-size: 1.3rem;
+    padding-left: 4%;
+}
+.package-B-food p{
+    color: black;
+    font-size: 1.3rem;
+    padding-left: 4%;
+}
+.package-C-food p{
+    color: black;
+    font-size: 1.3rem;
+    padding-left: 4%;
+}
+.package--currated p{
+    color: black;
+    font-size: 1.3rem;
+    padding-left: 4%;
+}
+
+.Addressing p{
+    color: black;
+    font-size: 1.5rem;
+    padding-bottom: 1%;
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.foll .asd input{
+    color: black;
+}
+.tep{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foll {
+    border: 2px solid #ffffff;
+    background-color: rgba(0, 140, 255, 0.692);
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    border-radius: 20px;
+
+}
+.sep {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.asd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.asd label, .asd input {
+    margin-right: 10px;
+}
+.asd button {
+    margin-left: auto;
+}
+
+.ttextt{
+    font-size: 1.4rem;
+}
+.edittnumm{
+    font-size: 1.35rem;
+}
+.btttn{
+    font-size: 1.3rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.foll .asd{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.posit{
+    font-size: 1.2rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-container input{
+    width: 50%;
+}
+

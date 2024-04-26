@@ -8,8 +8,8 @@ if(isset($_POST['submit'])){
     $password = $_POST['passwords'] ?? null;
 
     // Debugging: Echo the submitted email and password
-    echo "Submitted email: " . htmlspecialchars($email) . "<br>";
-    echo "Submitted password: " . htmlspecialchars($password) . "<br>";
+    // echo "Submitted email: " . htmlspecialchars($email) . "<br>";
+    // echo "Submitted password: " . htmlspecialchars($password) . "<br>";
 
     // Prepare the SQL query
     $query = $pdo->prepare("SELECT * FROM loginscred WHERE email = :email");
@@ -28,9 +28,6 @@ if(isset($_POST['submit'])){
     }
 }
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +53,8 @@ if(isset($_POST['submit'])){
                         echo '<a href="profile.php">' . $_SESSION['username'] . '</a>';
                         echo '<div class="dropdown-content">';
                         echo '<a href="profile.php">' . $_SESSION['username'] . '</a>';
-                        echo '<a href="settings.php">Settings</a>';
+                        echo '<a href="Account_management.php">Settings</a>';
+                        echo '<a href="order.php">Schedule</a>';
                         echo '<a href="logout.php">Logout</a>';
                         echo '</div>';
                     } else {
@@ -79,8 +77,8 @@ if(isset($_POST['submit'])){
             </header>
             <form action="login.php" method="post">
                 <div class="field input">
-                    <label for="email">Email</label> <!-- Corrected label -->
-                    <input type="email" name="email" id="email" required> <!-- Corrected input name -->
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
                 </div>
 
                 <div class="field input">
@@ -89,7 +87,7 @@ if(isset($_POST['submit'])){
                 </div>
 
                 <div class="field">
-                    <input type="submit" class="btn" name="submit" value="Login"> <!-- Corrected name attribute -->
+                    <input type="submit" class="btn" name="submit" value="Login">
                 </div>
                 <div class="links">
                     Don't Have Account?<a href="register.php"> Sign Up Now</a>

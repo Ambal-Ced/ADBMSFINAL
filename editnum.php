@@ -12,13 +12,47 @@ if (isset($_SESSION['username'])) {
     $user = $query->fetch(PDO::FETCH_ASSOC);
 }
 ?>
+<?php
+include 'connection.php';
+$errorMessage = '';
+if (isset($_GET['error']) && $_GET['error'] == 'invalid_contact_no') {
+    $errorMessage = 'Invalid Number';
+}
+?>
+<?php
+include 'connection.php';
+
+if (isset($_POST['editnum'])) {
+    $contact_no = $_POST['editnum'];
+    $username = $_SESSION['username'];
+
+    // Check if the contact number is 10 or 11 characters long
+    if (strlen($contact_no) >= 10 && strlen($contact_no) <= 11) {
+        // Prepare the SQL statement
+        $query = $pdo->prepare("UPDATE customer_info SET contact_no = :contact_no WHERE cid = (SELECT cid FROM loginscred WHERE username = :username)");
+        $query->execute(['contact_no' => $contact_no, 'username' => $username]);
+
+        // Redirect back to the profile page or another page after successful update
+        header("Location: profile.php");
+        exit;
+    } else {
+        header("Location: editnum.php?error=invalid_contact_no");
+    }
+    if (isset($_GET['error']) && $_GET['error'] == 'invalid_contact_no') {
+        $errorMessage = 'Invalid Number';
+    } else {
+        $errorMessage = '';
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -54,34 +88,24 @@ if (isset($_SESSION['username'])) {
         </nav>
     </div>
 </header>
-
-
-
-<div class="user-info">
-    <div class="styling">
-    <h2>User Info</h2>
-    <h3>Your Personal Info @Studio Ponkan <br><br>
-    </h3>
-    <h2>Basic Info</h2>
-    <p>Username: <?php echo $user ? htmlspecialchars($user['username']) : ''; ?></p>
-    <p>First Name: <?php echo $user ? htmlspecialchars($user['cfname']) : ''; ?></p>
-    <p>Middle Name: <?php echo $user ? htmlspecialchars($user['cmname']) : ''; ?></p>
-    <p>Last Name: <?php echo $user ? htmlspecialchars($user['clname']) : ''; ?></p>
-    <p>Unique ID: <?php echo$user ? htmlspecialchars($user['cid']) : ''?></p>
-    <h2>Contact Information</h2>
-    <p>Email: <?php echo $user ? htmlspecialchars($user['email']) : ''; ?> </p>
-    <p>Contact No.: <?php echo $user ? htmlspecialchars($user['contact_no']) : '';?> <a href="editnum.php" class="editnum"> edit</a></p>
-
-    <div class="edit-profile-link">
-        <a href="Edit.php">Edit Profile</a>
-        <a href="Account_management.php">Edit Account</a>
+<section class="tep">
+    <div class="foll">
+        <form action="editnum.php" method="post">
+            <div class="asd">
+                <div class="sep">
+                    <a href="profile.php">X</a>
+                </div>
+                <label for="editnum" class="edittnumm">Contact no</label>
+                <input class="ttextt" type="text" id="editnum" name="editnum" autocomplete="off" value="<?php echo isset($user['contact_no']) ? $user['contact_no'] : ''; ?>">
+                <?php if (!empty($errorMessage)) {
+                    echo '<div class="error-message">' . $errorMessage . '</div>';
+                }?>
+                <div class="bnt">
+                    <button class="btttn" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
     </div>
-    </div>
-</div>
-
-
+</section>
 </body>
 </html>
-<?php
-ob_end_flush();
-?>

@@ -1,0 +1,6 @@
+.input input[type="email"],
+.input input[type="password"] {
+    width: 200px;
+    font-size: 14px;
+}
+
