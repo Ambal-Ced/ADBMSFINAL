@@ -1,7 +1,6 @@
 patch note:
 version 4.30.24----
-1. More Content
-2. Added new function
-3. System improvement
-4. Minor Bug fixes
-5. Major Bug fix
+1. Bug Fixes
+2. Ready to Launch
+3. Website at 90%
+4. Need further testing

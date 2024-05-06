@@ -1,0 +1,71 @@
+.printable .apen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.printable .apen .pom{
+    background-color: rgba(35, 40, 44, 0.692);
+    padding: 2%;
+    border: solid white 2px;
+    border-radius: 10px;
+}
+
+.printing p{
+    padding: 2%;
+    color: black;
+}
+.sct{
+    height: 100vh;
+}
+.printing{
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.printing .rent{
+    background-color: rgba(35, 40, 44, 0.692);
+    padding: 2%;
+    border: solid white 2px;
+    border-radius: 20px;
+}
+.printing .rent .print-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.printing .rent h2{
+    color: black;
+}
+.ret{
+    background-color: white;
+    padding: 3%;
+}
+.hide{
+    display: none;
+}
+
+@media print {
+    header{
+        display: none;
+    }
+    .btn-con{
+        display: none;
+    }
+    .hide{
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

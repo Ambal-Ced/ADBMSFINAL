@@ -212,7 +212,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         echo '<a href="profile.php">' . $_SESSION['username'] . '</a>';
                         echo '<div class="dropdown-content">';
                         echo '<a href="profile.php">' . $_SESSION['username'] . '</a>';
-                        echo '<a href="settings.php">Settings</a>';
+                        echo '<a href="Account_management.php">Settings</a>';
+                        echo '<a href="order.php">Schedule</a>';
                         echo '<a href="logout.php">Logout</a>';
                         echo '</div>';
                     } else {

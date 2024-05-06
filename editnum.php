@@ -96,6 +96,9 @@ if (isset($_POST['editnum'])) {
                     <a href="profile.php">X</a>
                 </div>
                 <label for="editnum" class="edittnumm">Contact no</label>
+                <p>A contact number is a phone number that someone can be contacted on. It is used for various purposes, such as reaching out to 
+                    a person or a company or facilitating communication during specific times. 
+                    Contact numbers are essential for maintaining communication<br></p>
                 <input class="ttextt" type="text" id="editnum" name="editnum" autocomplete="off" value="<?php echo isset($user['contact_no']) ? $user['contact_no'] : ''; ?>">
                 <?php if (!empty($errorMessage)) {
                     echo '<div class="error-message">' . $errorMessage . '</div>';
