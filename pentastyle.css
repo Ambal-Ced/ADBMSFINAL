@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.penta{
+    height: 100vh 100%;
+
+}
+
+.penta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.quadra{
+    background-color: rgba(71, 71, 71, 0.644);
+    padding: 2%;
+    border: solid 2px white;
+    border-radius: 20px;
+
+}
+
+
+.sched{
+    margin-left: 10%;
+    margin-right: 35%;
+}

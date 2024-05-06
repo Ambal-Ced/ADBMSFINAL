@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Select all links in the navigation bar
     const navLinks = document.querySelectorAll('.menu-links li a');
 
-    // Add a click event listener to each link
+
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             // Check if the href starts with a #
@@ -21,14 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     targetSection.scrollIntoView({ behavior: 'smooth' });
                 }
             }
-            // If the href does not start with a #, allow the default action
         });
     });
 
-    // Handle the "Download Now!" button
     document.getElementById('dlpic').addEventListener('click', function(event) {
         event.preventDefault();
-        // Your custom code here, e.g., form submission or navigation
         console.log('Download button clicked');
     });
 
