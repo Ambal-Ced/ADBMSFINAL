@@ -28,7 +28,8 @@ require_once 'connection.php';
 <body>
     <div class="bodies">
 
-<header>
+        <body>
+        <header>
     <div class="header-content">
         <a href="index.php" class="logo-name">Studio Ponkan</a>
         <nav class="navbar">
@@ -160,11 +161,10 @@ require_once 'connection.php';
 </section>
 <section>
     <div class="as-whole">
-    <form method="POST" action="process_booking.php">
+    <form method="POST" action="#">
 <div class="option-container">
 
 <div class="Addressing">
-<input type="hidden" name="productvalues" id="productvalues" value="">
     <p>First Name: <?php echo $user ? htmlspecialchars($user['cfname']) : 'Not Log In'; ?></p>
     <p>Middle Name: <?php echo $user ? htmlspecialchars($user['cmname']) : 'Not Log In'; ?></p>
     <p>Last Name: <?php echo $user ? htmlspecialchars($user['clname']) : 'Not Log In'; ?></p>
@@ -180,15 +180,15 @@ require_once 'connection.php';
     <div class="prduct">
     <label for="products">Product: </label>
     <input type="text" name="products" id="selectedOption" class="boxread" readonly>
-    <button id="showOptions" type="button" >Show Products</button>
+    <button id="showOptions">Show Products</button>
     <div id="options" class="options-hidden">
-            <a class="option" data-value="1">Portrait Package A Php 500 per PAX 2 FINAL LAYOUTS</a>
-            <a class="option" data-value="2">Portrait Package B Php 700 per PAX 4 FINAL LAYOUTS</a>
-            <a class="option" data-value="3">Portrait Package C Php 1,300 per PAX  6 FINAL LAYOUTS</a>
-            <a class="option" data-value="4">Food Entices Package A Php 5,000 10 - 15 DISHES</a>
-            <a class="option" data-value="5">Food Entices Package B Php 7,000 20 - 30 DISHES</a>
-            <a class="option" data-value="6">Food Entices Package C Php 10,000 40 - 50 DISHES</a>
-            <a class="option" data-value="7">Currated Package Php 2,000 per dish 3 FINAL LAYOUTS PER DISH</a>
+        <a class="option">Portrait Package A Php 500 per PAX 2 FINAL LAYOUTS<?php $productvalues = '1'?></a>
+        <a class="option">Portrait Package B Php 700 per PAX 4 FINAL LAYOUTS<?php $productvalues = '2'?></a>
+        <a class="option">Portrait Package C Php 1,300 per PAX  6 FINAL LAYOUTS<?php $productvalues = '3'?></a>
+        <a class="option">Food Entices Package A Php 5,000 10 - 15 DISHES<?php $productvalues = '4'?></a>
+        <a class="option">Food Entices Package B Php 7,000 20 - 30 DISHES<?php $productvalues = '5'?></a>
+        <a class="option">Food Entices Package C Php 10,000 40 - 50 DISHES<?php $productvalues = '6'?></a>
+        <a class="option">Currated Package Php 2,000 per dish 3 FINAL LAYOUTS PER DISH<?php $productvalues = '7'?></a>
     </div>
     </div>
     <div class="posit">
@@ -199,6 +199,5 @@ require_once 'connection.php';
 </div>
 </section>
 <script src="opt.js"></script>
-<script src="debg.js"></script>
 </div>
 </body>

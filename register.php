@@ -35,8 +35,7 @@ if(isset($_POST['register'])){
     $checkUserStmt->execute();
 
     if ($checkUserStmt->rowCount() > 0) {
-        // Output a JavaScript alert function
-        echo "<script>alert('Email or username already registered!');</script>";
+        echo "Email or username already registered!";
         exit;
     }
 
@@ -173,24 +172,5 @@ if(isset($_POST['register'])){
             </form>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>$(document).ready(function(){
-    $('form').on('submit', function(e){
-        e.preventDefault();
-
-        $.ajax({
-            url: 'register.php',
-            type: 'post',
-            data: $(this).serialize(),
-            success: function(response){
-                if(response.includes('alert')){
-                    eval(response);
-                } else {
-                    window.location.href = 'login.php';
-                }
-            }
-        });
-    });
-});</script>
 </body>
 </html>
