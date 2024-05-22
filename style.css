@@ -31,7 +31,6 @@ body{
     border-radius: 8px;
     justify-content: space-between;
     width: 100%;
-    font-size: 1.5rem 100%;
 }
 
 .header-content a {
@@ -43,7 +42,6 @@ body{
     transition: color 0.4s ease-in-out;
     position: relative;
     overflow: hidden;
-    font-size: 110%;
 }
 
 .header-content a:hover{
@@ -69,7 +67,7 @@ body{
 header .logo-name{
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     padding-bottom: 12px;
     transition: color 0.3s ease-in;
 }
@@ -556,7 +554,7 @@ section{
 }
 .foll {
     border: 2px solid #ffffff;
-    background-color: rgba(35, 40, 44, 0.692);
+    background-color: rgba(0, 140, 255, 0.692);
     padding: 20px;
     position: relative;
     width: 50%;
@@ -612,13 +610,3 @@ section{
     width: 50%;
 }
 
-.logo-ponkan img{
-    overflow: hidden;
-    height: 80%;
-    width: 90%;
-}
-.logo-idev img{
-    height: 90%;
-    width: 90%;
-    overflow: hidden;
-}
